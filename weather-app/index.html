@@ -40,5 +40,23 @@
 
       </div>
 
+      <script>
+         const apiKey = "3d64a0ba5ccbd2bee251dcb36cde4d38";
+         const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=porto";
+
+         async function checkWeather() {
+            const response = await fetch(apiUrl + `&appid=${apiKey}`)
+            var data = await response.json()
+
+            console.log("data: ",data)
+
+
+         }
+
+         checkWeather()
+
+
+      </script>
+
    </body>
 </html>
